@@ -86,7 +86,7 @@ function populateSection(parentSection,built,activityName,batchNo)
           userAddress = userAddress.substring(0,15)+'...';
         }
 
-        var refLink = 'https://rinkeby.etherscan.io/tx/'+resultData.transactionHash;
+        var refLink = 'http://52.66.110.234:8000/#/tx/'+resultData.transactionHash;
         var html = `<span class="text-info"><i class='fa fa-user'> </i>
                         `+resultData.name+` (`+userAddress+`) <br/>
                         `+phoneNoSec+`
@@ -99,7 +99,7 @@ function populateSection(parentSection,built,activityName,batchNo)
   		}
 
       if(resultData.transactionHash){
-        var url = 'https://rinkeby.etherscan.io/tx/'+resultData.transactionHash;
+        var url = 'http://52.66.110.234:8000/#/tx/'+resultData.transactionHash;
         var qrCode = 'https://chart.googleapis.com/chart?cht=qr&chld=H|1&chs=400x400&chl='+url;
         var qrCodeSec = `<a href="`+qrCode+`" title="`+resultData.transactionHash+`" class="qr-code-magnify pull-right" data-effect="mfp-zoom-in">
                           <img src="`+qrCode+`" class="img-responsive" style="width:70px; height:70px; margin-top:-75px;"/>

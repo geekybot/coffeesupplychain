@@ -341,7 +341,7 @@ function buildUserTable(globUserData) {
 }
 
 function handleTransactionResponse(txHash, finalMessage) {
-	var txLink = "https://rinkeby.etherscan.io/tx/" + txHash;
+	var txLink = "http://52.66.110.234:8000/#/tx/" + txHash;
 	var txLinkHref = "<a target='_blank' href='" + txLink + "'> Click here for Transaction Status </a>";
 
 	sweetAlert("Success", "Please Check Transaction Status here :  " + txLinkHref, "success");
