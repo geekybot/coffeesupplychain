@@ -32,26 +32,26 @@ $(document).ready(function () {
             switch (email) {
                 case "admin@coffee.com":
                     console.log(window.location);
-                    window.location.replace(window.location.origin + '/admin.php');
+                    window.location.replace(window.location.origin + '/coffee/admin.php');
                     break;
                 case "inspector@coffee.com":
-                    window.location.replace(window.location.origin + '/fi_user.php');
+                    window.location.replace(window.location.origin + '/coffee/fi_user.php');
                     break;
                 case "harv@coffee.com":
-                    window.location.replace(window.location.origin + '/har_user.php');
+                    window.location.replace(window.location.origin + '/coffee/har_user.php');
                     break;
                 case "importer@coffee.com":
-                    window.location.replace(window.location.origin + '/imp_user.php');
+                    window.location.replace(window.location.origin + '/coffee/imp_user.php');
                     break;
                 case "processor@coffee.com":
-                    window.location.replace(window.location.origin + '/proc_user.php');
+                    window.location.replace(window.location.origin + '/coffee/proc_user.php');
                     break;
                 case "exporter@coffee.com":
-                    window.location.replace(window.location.origin + '/exp_user.php');
+                    window.location.replace(window.location.origin + '/coffee/exp_user.php');
                     break;
                 default:
                     console.log("coming to default")
-                    window.location.replace(window.location.origin + '/index.php');
+                    window.location.replace(window.location.origin + '/coffee/index.php');
             }
         }
         else {
