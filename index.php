@@ -25,7 +25,7 @@
     <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div>
-    <section id="wrapper" class="login-register p-b-20">
+    <section id="wrapper" class="login-register p-b-10">
         <div class="login-box p-b-20">
             <div class="white-box p-b-20">
                     <div class="form-group text-center">
@@ -41,35 +41,18 @@
                         </div>
                     </div>
                     <div class="form-group text-center">
-                        <!-- <div class="col-xs-6 p-b-20">
-                            <a href="https://metamask.io/" target="_blank" class="btn btn-rounded btn-block btn-primary">Get MetaMask</a>
-                        </div> -->
-                        <div class="row">
-                            <div class="col-xs-6 p-b-20">
-                                <a href="admin.php" class="btn btn-rounded btn-block btn-info">Admin Log In</a>
-                            </div>
-                            <div class="col-xs-6 p-b-20">
-                                <a href="fi_user.php" class="btn btn-rounded btn-block btn-info">Farm Inspector Log In</a>
-                            </div>
+                        <div class="col-xs-6 p-b-10">
+                            <input class="form-control" style="border-radius:20px;" type="email" name="Email" id="email" placeholder="Enter your email">
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6 p-b-20">
-                                <a href="har_user.php" class="btn btn-rounded btn-block btn-info">Harvester Log In</a>
-                            </div>
-                            <div class="col-xs-6 p-b-20">
-                                <a href="exp_user.php" class="btn btn-rounded btn-block btn-info">Exporter Log In</a>
-                            </div>
+                        <div class="col-xs-6 p-b-5">
+                            <input class="form-control" style="border-radius:20px;" type="password" name="Password" id="password" placeholder="Password">
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6 p-b-20">
-                                <a href="imp_user.php" class="btn btn-rounded btn-block btn-info">Importer Log In</a>
-                            </div>
-                            
-                            <div class="col-xs-6 p-b-20">
-                                <a href="proc_user.php" class="btn btn-rounded btn-block btn-info">Processor Log In</a>
-                            </div>
+                        <div class="alert alert-danger col-xs-6 mt-2" role="alert" >
+                            Invalid Credentials! Try Again
                         </div>
-                        
+                        <div class="col-xs-6 p-b-10">
+                            <button class="btn btn-rounded btn-block btn-primary" id="signin">Sign In</button>
+                        </div>
                     </div>   
             </div>
         </div>
@@ -88,7 +71,7 @@
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="js/custom.js"></script>
     <!--Style Switcher -->
 </body>
 

@@ -6,13 +6,60 @@ $(document).ready(function () {
     "use strict";
 
     var body = $("body");
-
+    var creds = {
+        "admin@coffee.com": "password",
+        "inspector@coffee.com": "password",
+        "harv@coffee.com": "password",
+        "importer@coffee.com": "password",
+        "processor@coffee.com": "password",
+        "exporter@coffee.com": "password",
+    }
     $(function () {
         $(".preloader").fadeOut();
         $('#side-menu').metisMenu();
+        // $().alert('close')
+        $('.alert').hide();
     });
 
     /* ===== Open-Close Right Sidebar ===== */
+    $("#signin").click(function () {
+        var email = $('#email').val();
+        var password = $('#password').val();
+        console.log(creds, "  === ", password);
+
+        if (creds[email] == password) {
+
+            switch (email) {
+                case "admin@coffee.com":
+                    console.log(window.location);
+                    window.location.replace(window.location.origin + '/admin.php';
+                    break;
+                case "inspector@coffee.com":
+                    window.location.replace(window.location.origin + '/fi_user.php');
+                    break;
+                case "harv@coffee.com":
+                    window.location.replace(window.location.origin + '/har_user.php');
+                    break;
+                case "importer@coffee.com":
+                    window.location.replace(window.location.origin + '/imp_user.php');
+                    break;
+                case "processor@coffee.com":
+                    window.location.replace(window.location.origin + '/proc_user.php');
+                    break;
+                case "exporter@coffee.com":
+                    window.location.replace(window.location.origin + '/exp_user.php');
+                    break;
+                default:
+                    console.log("coming to default")
+                    window.location.replace(window.location.origin + '/index.php');
+            }
+        }
+        else {
+            console.log("Wrong password");
+            $('.alert').show();
+        }
+    });
+
 
     $(".right-side-toggle").on("click", function () {
         $(".right-sidebar").slideDown(50).toggleClass("shw-rside");
@@ -46,35 +93,35 @@ $(document).ready(function () {
 
     $(function () {
         var set = function () {
-                var topOffset = 120,
-                    width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width,
-                    height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
-                if (width < 768) {
-                    $('div.navbar-collapse').addClass('collapse');
-                    topOffset = 100; /* 2-row-menu */
-                } else {
-                    $('div.navbar-collapse').removeClass('collapse');
-                }
+            var topOffset = 120,
+                width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width,
+                height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
+            if (width < 768) {
+                $('div.navbar-collapse').addClass('collapse');
+                topOffset = 100; /* 2-row-menu */
+            } else {
+                $('div.navbar-collapse').removeClass('collapse');
+            }
 
-                /* ===== This is for resizing window ===== */
+            /* ===== This is for resizing window ===== */
 
-                if (width < 1170) {
-                    body.addClass('content-wrapper');
-                    $(".open-close i").removeClass('icon-arrow-left-circle');
-                    $(".sidebar").css("overflow", "inherit").parent().css("overflow", "visible");
-                } else {
-                    body.removeClass('content-wrapper');
-                    $(".open-close i").addClass('icon-arrow-left-circle');
-                }
+            if (width < 1170) {
+                body.addClass('content-wrapper');
+                $(".open-close i").removeClass('icon-arrow-left-circle');
+                $(".sidebar").css("overflow", "inherit").parent().css("overflow", "visible");
+            } else {
+                body.removeClass('content-wrapper');
+                $(".open-close i").addClass('icon-arrow-left-circle');
+            }
 
-                height = height - topOffset;
-                if (height < 1) {
-                    height = 1;
-                }
-                if (height > topOffset) {
-                    $("#page-wrapper").css("min-height", (height) + "px");
-                }
-            },
+            height = height - topOffset;
+            if (height < 1) {
+                height = 1;
+            }
+            if (height > topOffset) {
+                $("#page-wrapper").css("min-height", (height) + "px");
+            }
+        },
             url = window.location,
             element = $('ul.nav a').filter(function () {
                 return this.href === url || url.href.indexOf(this.href) === 0;
@@ -114,8 +161,8 @@ $(document).ready(function () {
             panelRemover = '[data-perform="panel-dismiss"]';
         $(panelSelector).each(function () {
             var collapseOpts = {
-                    toggle: false
-                },
+                toggle: false
+            },
                 parent = $(this).closest('.panel'),
                 wrapper = parent.find('.panel-wrapper'),
                 child = $(this).children('i');
