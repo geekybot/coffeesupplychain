@@ -32,7 +32,7 @@ $(document).ready(function () {
             switch (email) {
                 case "admin@coffee.com":
                     console.log(window.location);
-                    window.location.replace(window.location.origin + '/admin.php';
+                    window.location.replace(window.location.origin + '/admin.php');
                     break;
                 case "inspector@coffee.com":
                     window.location.replace(window.location.origin + '/fi_user.php');
